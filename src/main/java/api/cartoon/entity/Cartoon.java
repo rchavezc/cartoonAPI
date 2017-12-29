@@ -22,7 +22,7 @@ public class Cartoon extends BasicEntity {
     private Date birthDate;
 
     @Column
-    private String description;
+    private String character;
 
     public Cartoon() {
     }
@@ -51,11 +51,11 @@ public class Cartoon extends BasicEntity {
         this.birthDate = birthDate;
     }
 
-    public String getDescription() {
-        return description;
+    public String getCharacter() {
+        return character;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setCharacter(String character) {
+        this.character = character;
     }
 }

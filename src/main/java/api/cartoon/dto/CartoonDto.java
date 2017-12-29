@@ -6,7 +6,7 @@ public class CartoonDto extends BasicDto {
     private String id;
     private String name;
     private Date birthDate;
-    private String description;
+    private String character;
 
     public CartoonDto() {
     }
@@ -35,11 +35,11 @@ public class CartoonDto extends BasicDto {
         this.birthDate = birthDate;
     }
 
-    public String getDescription() {
-        return description;
+    public String getCharacter() {
+        return character;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setCharacter(String character) {
+        this.character = character;
     }
 }

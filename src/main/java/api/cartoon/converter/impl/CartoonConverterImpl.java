@@ -16,7 +16,7 @@ public class CartoonConverterImpl implements CartoonConverter {
         cartoonDto.setId(entity.getId());
         cartoonDto.setName(entity.getName());
         cartoonDto.setBirthDate(entity.getBirthDate());
-        cartoonDto.setDescription(entity.getDescription());
+        cartoonDto.setCharacter(entity.getCharacter());
         return cartoonDto;
     }
 
@@ -27,7 +27,7 @@ public class CartoonConverterImpl implements CartoonConverter {
             cartoon.setId(dto.getId());
         cartoon.setName(dto.getName());
         cartoon.setBirthDate(dto.getBirthDate());
-        cartoon.setDescription(dto.getDescription());
+        cartoon.setCharacter(dto.getCharacter());
         return cartoon;
     }
 
