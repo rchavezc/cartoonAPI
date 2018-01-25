@@ -19,7 +19,7 @@ public class Cartoon extends BasicEntity {
     private String name;
 
     @Column(name = "birth_date")
-    private Date birthDate;
+    private Long birthDate;
 
     @Column
     private String character;
@@ -43,11 +43,11 @@ public class Cartoon extends BasicEntity {
         this.name = name;
     }
 
-    public Date getBirthDate() {
+    public Long getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(Date birthDate) {
+    public void setBirthDate(Long birthDate) {
         this.birthDate = birthDate;
     }
 

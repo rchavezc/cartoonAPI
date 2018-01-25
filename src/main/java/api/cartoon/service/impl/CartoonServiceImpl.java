@@ -7,7 +7,7 @@ import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 @Service
@@ -25,5 +25,10 @@ public class CartoonServiceImpl implements CartoonService {
     public List<Cartoon> getAll() {
         Iterable<Cartoon> iterable = cartoonDao.findAll();
         return Lists.newArrayList(iterable);
+    }
+
+    @Override
+    public Cartoon getTodaysCharacter() {
+        return cartoonDao.findByBirthDate(Calendar.getInstance().getTimeInMillis());
     }
 }

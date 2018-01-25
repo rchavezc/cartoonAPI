@@ -29,4 +29,9 @@ public class CartoonController {
     public List<CartoonDto> getAll(){
         return cartoonConverter.toDto(cartoonService.getAll());
     }
+
+    @RequestMapping(value = "/get", method = RequestMethod.GET, produces = "application/json")
+    public CartoonDto getToadysCharacter(){
+        return cartoonConverter.toDto(cartoonService.getTodaysCharacter());
+    }
 }

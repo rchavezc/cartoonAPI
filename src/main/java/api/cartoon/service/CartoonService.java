@@ -7,4 +7,5 @@ import java.util.List;
 public interface CartoonService {
     Cartoon createOrUpdate(Cartoon cartoon);
     List<Cartoon> getAll();
+    Cartoon getTodaysCharacter();
 }
