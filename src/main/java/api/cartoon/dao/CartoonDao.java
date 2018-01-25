@@ -8,6 +8,6 @@ import org.springframework.data.repository.query.Param;
 import java.util.Date;
 
 public interface CartoonDao extends CrudRepository<Cartoon, String> {
-    @Query("SELECT cartoon FROM Cartoon cartoon WHERE cartoon.birthDate <= :date")
-    Cartoon findByBirthDate(@Param("date") long date);
+    @Query("SELECT cartoon FROM Cartoon cartoon WHERE cartoon.birthDate = :date")
+    Cartoon findByBirthDate(@Param("date") String date);
 }

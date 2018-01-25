@@ -5,7 +5,7 @@ import java.util.Date;
 public class CartoonDto extends BasicDto {
     private String id;
     private String name;
-    private Long birthDate;
+    private String birthDate;
     private String character;
 
     public CartoonDto() {
@@ -27,11 +27,11 @@ public class CartoonDto extends BasicDto {
         this.name = name;
     }
 
-    public Long getBirthDate() {
+    public String getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(Long birthDate) {
+    public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
     }
 

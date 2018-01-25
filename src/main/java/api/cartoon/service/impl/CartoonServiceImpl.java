@@ -7,7 +7,10 @@ import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -29,6 +32,7 @@ public class CartoonServiceImpl implements CartoonService {
 
     @Override
     public Cartoon getTodaysCharacter() {
-        return cartoonDao.findByBirthDate(Calendar.getInstance().getTimeInMillis());
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        return cartoonDao.findByBirthDate(dateFormat.format(new Date()));
     }
 }
